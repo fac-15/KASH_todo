@@ -1,8 +1,10 @@
+const todoFunctions = require('./logic.js');
 
-var test = require('tape');
-var logic = require('./logic');
-
-test('Example test', function(t) {
-  t.pass();
-  t.end();
+test('test if generateId works', () => {
+  expect(todoFunctions.generateId()).toBe(1);
 });
+
+// test('test if cloneArrayOfObjects works', () => {
+//   console.log(logic)
+//   expect(logic.cloneArrayOfObjects).toBe(Function);
+// });

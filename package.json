@@ -1,0 +1,23 @@
+{
+  "name": "kash_todo",
+  "version": "1.0.0",
+  "description": "## Use TDD to build a To-do app",
+  "main": "dom.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-15/KASH_todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-15/KASH_todo/issues"
+  },
+  "homepage": "https://github.com/fac-15/KASH_todo#readme"
+}
