@@ -21,17 +21,23 @@ var todoFunctions = {
       return JSON.parse(JSON.stringify(todo));
     });
   },
+
   addTodo: function(todos, newTodo) {
-    let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
-    let id = todoFunctions.generateId(newTodo);
-    return arrayCopy.concat({ description: newTodo, id: id });
+    // let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
+    // let id = todoFunctions.generateId();
+    // newTodo['id'] = id;
+    // return arrayCopy.concat(newTodo);
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
-    todoFunctions.generateId();
+    let id = todoFunctions.generateId();
+    newTodo['id'] = id;
     return todoFunctions.cloneArrayOfObjects(todos).concat(newTodo);
   },
+
+
+
   deleteTodo: function(todos, idToDelete) {
     let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
     let result = array.filter(filterByID);
@@ -48,21 +54,21 @@ var todoFunctions = {
       return todo.id != idToDelete;
     });
   },
-  markTodo: function(todos, idToMark) {
-    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-    // in the new todo array, all elements will remain unchanged except the one with id: idToMark
-    // this element will have its done value toggled
-    // hint: array.map
-    return todoFunctions.cloneArrayOfObjects(todos).map(function(todo){
-
-    });
-  },
-  sortTodos: function(todos, sortFunction) {
-    // stretch goal! Do this last
-    // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
-    // sortFunction will have same signature as the sort function in array.sort
-    // hint: array.slice, array.sort
-  }
+//   markTodo: function(todos, idToMark) {
+//     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
+//     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
+//     // this element will have its done value toggled
+//     // hint: array.map
+//     return todoFunctions.cloneArrayOfObjects(todos).map(function(todo){
+//
+//     });
+//   },
+//   sortTodos: function(todos, sortFunction) {
+//     // stretch goal! Do this last
+//     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
+//     // sortFunction will have same signature as the sort function in array.sort
+//     // hint: array.slice, array.sort
+//   }
 };
 
 // Why is this if statement necessary?
