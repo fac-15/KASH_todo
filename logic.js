@@ -39,20 +39,23 @@ var todoFunctions = {
 
 
   deleteTodo: function(todos, idToDelete) {
-    let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
-    let result = array.filter(filterByID);
-
-    function filterByID(item) {
-      if (item.id === idToDelete) {
-        delete array.item;
-      }
-    }
+    // let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
+    // let result = arrayCopy.filter(filterByID);
+    //
+    // function filterByID(item) {
+    //   if (item.id === idToDelete) {
+    //     delete arrayCopy.item;
+    //   }
+    // }
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
-    return todoFunctions.cloneArrayOfObjects(todos).filter(function(todo){
-      return todo.id != idToDelete;
-    });
+    let cloneArr = todoFunctions.cloneArrayOfObjects(todos);
+    return filteredArr = cloneArr.filter(function(todo){
+      todo.id != idToDelete;
+    }
+    )
+    // return filteredArr;
   },
 //   markTodo: function(todos, idToMark) {
 //     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
