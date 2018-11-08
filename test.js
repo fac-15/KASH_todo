@@ -7,6 +7,7 @@ const dummyTodo = [
 ];
 
 const newTodoDummy = [{ id: 0, description: 'fourth todo'}];
+const newTodoCompletedDummy = [{ id: 0, description: 'fourth todo', completed: true}];
 
 test('test if generateId works', () => {
   expect(todoFunctions.generateId()).toBe(1);
