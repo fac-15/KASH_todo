@@ -12,7 +12,9 @@
     { id: -1, description: 'third todo' },
   ]; // this is our initial todoList
 
-  // This function takes a todo, it returns the DOM node representing that todo
+  // This function takes a todo,
+  //it returns the DOM node representing that todo
+  
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
