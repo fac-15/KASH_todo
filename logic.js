@@ -37,26 +37,31 @@ var todoFunctions = {
   },
 
 
+  // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
+  // return a new array, this should not contain any todo with an id of idToDelete
+  // hint: array.filter
+
 
   deleteTodo: function(todos, idToDelete) {
-    // let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
-    // let result = arrayCopy.filter(filterByID);
-    //
-    // function filterByID(item) {
-    //   if (item.id === idToDelete) {
-    //     delete arrayCopy.item;
-    //   }
-    // }
-    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-    // return a new array, this should not contain any todo with an id of idToDelete
-    // hint: array.filter
-    let cloneArr = todoFunctions.cloneArrayOfObjects(todos);
-    return filteredArr = cloneArr.filter(function(todo){
-      todo.id != idToDelete;
+    let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
+    console.log(arrayCopy);
+
+    let result = arrayCopy.filter(function(todo){
+      return todo.id != idToDelete;
+    })
+    return result;
     }
-    )
-    // return filteredArr;
-  },
+
+    // let cloneArr = todoFunctions.cloneArrayOfObjects(todos);
+    // return filteredArr = cloneArr.filter(function(todo){
+    //   return todo.id != idToDelete;
+    // }
+    // )
+
+
+
+
+  }
 //   markTodo: function(todos, idToMark) {
 //     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
 //     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
@@ -72,7 +77,7 @@ var todoFunctions = {
 //     // sortFunction will have same signature as the sort function in array.sort
 //     // hint: array.slice, array.sort
 //   }
-};
+
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
