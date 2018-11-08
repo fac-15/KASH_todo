@@ -1,4 +1,13 @@
-const todoFunctions = require("./logic.js");
+const todoFunctions = require('./logic.js');
+
+const dummyTodo = [
+  { id: -3, description: 'first todo' },
+  { id: -2, description: 'second todo' },
+  { id: -1, description: 'third todo' },
+];
+
+const newTodoDummy = [{ id: 0, description: 'fourth todo'}];
+const newTodoCompletedDummy = [{ id: 0, description: 'fourth todo', completed: true}];
 
 test('test if generateId works', () => {
   expect(todoFunctions.generateId()).toBe(1);
