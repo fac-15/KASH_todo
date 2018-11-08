@@ -1,17 +1,21 @@
-const todoFunctions = require('./logic.js');
-
-const dummyTodo = [
-  { id: -3, description: 'first todo' },
-  { id: -2, description: 'second todo' },
-  { id: -1, description: 'third todo' },
-];
-
-const newTodoDummy = [{ id: 0, description: 'fourth todo'}];
+const todoFunctions = require("./logic.js");
 
 test('test if generateId works', () => {
   expect(todoFunctions.generateId()).toBe(1);
 });
 
+// test("test if it is an array", () => {
+//   expect(Array.isArray(todoFunctions.addTodo())).toBe(true);
+// });
+
+test("test if updated array is returned", () => {
+  expect(todoFunctions.addTodo([1, 2, 3, 4])).toEqual([1, 2, 3, { id: 2 }]);
+});
+
+// test('test if cloneArrayOfObjects works', () => {
+//   console.log(logic)
+//   expect(logic.cloneArrayOfObjects).toBe(Function);
+// });
 // cloneArrayOfObjects should take an array and return another array of objects
 test('test if cloneArrayOfObjects works', () => {
   expect(todoFunctions.cloneArrayOfObjects(dummyTodo)).not.toBe(dummyTodo);

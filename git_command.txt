@@ -1,0 +1,50 @@
+git config --global user.name "name" => set name
+git config --global user.email "email" => set email
+git config --global color.ui true => set nice colours for git terminal
+git config --list => show configured name, email.....
+
+git log => show all commits.
+git log --stat => show all commits, no of files changed and no of actul changes.
+git diff oldComitId newComitId => show difference between 2 commits.
+git --version => find out version of the Git.
+git clone git@github.com:userName/repositoryName.git => clone repository.
+git checkout comitId => change to different version of code.
+
+git init => create a repository
+git status => check status of repository
+git add fileName => add file to the staging area
+git add . => Git will grab all new or changed files from root directory and move them to staging area
+git stash => get back to the head, use it when you do not want to add and commit changes
+git checkout filenme => discard changes in working directory
+git add --all => will add all new or changed files even if they are inside of directories
+git rm --cached fileName OR git reset fileName => remove file from staging area
+git commit -m " type in commit message" => commits everything from staggered area to repository
+
+git commit -a -m "commit message" => commit files that has been stagered before, quick way
+git reset --soft HEAD^ => undo the commit
+git commit --amend -m "com message" => instead of resetting the HEAD and undoing the last commit, we can rectify a commit by using the "--amend" option when committing to a repository. Just add the remaining file to the staging area and then commit
+
+git remote add origin git@github.com:userName/repositoryName.git => bind remote repository to your local repository
+git push -u origin repositoryName => use first time when pushing your files to a remote repository
+git push => push new files to remote repository
+git pull => pull others updates to become up to date on project
+git remote -v => The "-v" option will list all remote repositories you've connected to
+
+git branch => see all branches
+git branch branchName => create new branch
+git checkout branchName => switch to another branch
+git push --set-upstream origin branchName => add branch on remote and make up to date with master
+git merge branchName => add changes from another branch, must use "push" after that
+git branch -d branchName => delete branch
+git checkout -b branchName => create new branch and switch to that branch right away
+git branch -a =>see all remote branches
+
+***********publish online on surge.sh **************
+
+1) npm install --global surge
+2)move to the project directory and type: surge
+
+
+
+
+
