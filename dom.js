@@ -17,7 +17,6 @@
   var button = document.getElementById("submit");
 
   var createTodoNode = function(todo) {
-    console.log(todo);
     var todoNode = document.createElement("li");
     todoNode.textContent = todo.description;
     //container.appendChild(todoNode);

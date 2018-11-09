@@ -1,21 +1,43 @@
 body {
   height: 200em;
-  background-color: #5cdb95;
-  font-size: 1.1vw;
+  background-color: #fff;
+  font-size: 2.1vw;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 form {
   margin: 10px auto;
-  max-width: 400px;
+  /* max-width: 400px; */
   padding: 20px 12px 10px 20px;
 }
 
+#form {
+  background-color: #5cdb95;
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-top: 5vh;
+}
+
 ul {
-  padding: 0;
+  padding: 1em;
   list-style: none;
-  margin: 10px 0 0 0;
+  margin: 0 auto;
+  /* border: 2px solid black; */
+  width: 80%;
+}
+
+ul li {
+  display: block;
+  margin: 0 auto;
+  /* position: relative;
+  left: -5%; */
+  /* border: 2px solid black; */
+  width: 100%;
+  /* text-align: center; */
 }
 
 form input[type="text"],
@@ -50,8 +72,6 @@ form input[type="submit"] {
   padding: 8px 15px 8px 15px;
   border: none;
   color: #fff;
-
-  ;
 }
 
 form input[type="submit"]:hover {
