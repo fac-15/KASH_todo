@@ -60,3 +60,14 @@ form input[type="submit"]:hover {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
 }
+
+.checkboxTrue {
+  background-color: red;
+  height: 1.25em;
+  border-radius: 30%;
+}
+
+.checkboxFalse {
+  background-color: white;
+  height: 10px;
+}

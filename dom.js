@@ -22,7 +22,22 @@
     todoNode.textContent = todo.description;
     //container.appendChild(todoNode);
     //return container;
-
+    var checkMark = document.createElement("button");
+    if(todo.done){
+        checkMark.classList.add('checkboxTrue');
+        // todoNode.classList.add('checked-off');
+      } else {
+        checkMark.classList.add('checkboxFalse');
+      }
+    checkMark.addEventListener("click", function(event){
+      var newState = todoFunctions.markTodo(state, todo.id);
+      // checkMark.classList.toggle("checkbox");
+      // checkMark.setAttribute("id", "markk");
+      // var element = document.getElementById('markk');
+      // element.style.color = 'red';
+      update(newState);
+    });
+    todoNode.appendChild(checkMark);
     // you will need to use addEventListener
 
     // add span holding description
