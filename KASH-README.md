@@ -20,7 +20,8 @@ Mostly, we spent time making tests. This was way harder than we expected. Probab
 
 We also learned how to hardcode variables into testing.
 
-We got more familiar with jest and realised that you could use a lot of different things as the output thing, and that it didn't have to be "toBe".
+We got more familiar with jest and realised that you could use a lot of different things as the output thing, and that it didn't have to be "toBe". There was an overall consensus that Jest was great except that we wished that it would show the results for tests passed.
+
 https://jestjs.io/docs/en/api
 
 
