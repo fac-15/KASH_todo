@@ -23,4 +23,4 @@ We also learned how to hardcode variables into testing.
 We got more familiar with jest and realised that you could use a lot of different things as the output thing, and that it didn't have to be "toBe".
 
 
-![everything is fine gif}(https://media.giphy.com/media/NTur7XlVDUdqM/giphy.gif)
+![everything is fine gif](https://media.giphy.com/media/NTur7XlVDUdqM/giphy.gif)
