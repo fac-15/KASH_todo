@@ -32,75 +32,69 @@ var todoFunctions = {
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
     let id = todoFunctions.generateId();
-    newTodo['id'] = id;
+    newTodo["id"] = id;
     return todoFunctions.cloneArrayOfObjects(todos).concat(newTodo);
   },
-
 
   // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
   // return a new array, this should not contain any todo with an id of idToDelete
   // hint: array.filter
 
-
-deleteTodo: function(todos, idToDelete) {
+  deleteTodo: function(todos, idToDelete) {
     let arrayCopy = todoFunctions.cloneArrayOfObjects(todos);
-    console.log(arrayCopy);
 
-    let result = arrayCopy.filter(function(todo){
+    let result = arrayCopy.filter(function(todo) {
       return todo.id != idToDelete;
-
     });
-  return result;
+    return result;
   },
 
-markTodo: function(todos, idToMark){
-  let mark = todoFunctions.cloneArrayOfObjects(todos);
-  for (var i=0; i<mark.length; i++){
-    if (mark[i].id== idToMark){
-      if ((!mark[i].done) || (mark[i].done == 'false')){
-        mark[i].done = 'true';
-        return mark;
-      }
-      else {
-        mark[i].done = "false";
-        return mark;
+  markTodo: function(todos, idToMark) {
+    let mark = todoFunctions.cloneArrayOfObjects(todos);
+    for (var i = 0; i < mark.length; i++) {
+      if (mark[i].id == idToMark) {
+        if (!mark[i].done || mark[i].done == "false") {
+          mark[i].done = "true";
+          return mark;
+        } else {
+          mark[i].done = "false";
+          return mark;
+        }
       }
     }
-  }
-},
+  },
 
-
-// should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-// in the new todo array, all elements will remain unchanged except the one with id: idToMark
-// this element will have its done value toggled
-// hint: array.map
-// return mark;
-//   markTodo: function(todos, idToMark) {
-//   let mark = todoFunctions.cloneArrayOfObjects(todos);
-//     for (var i =0 ; i < mark.length; i++){
-//
-//       if (mark[i].id == idToMark){
-//       if ((!mark[i].done) || (mark[i].done == "false")){
-//           mark[i].done = "true";
-//           return mark;
-//           }
-//       else{
-//             console.log("hi");
-//             mark[i].done = "false"
-//             return mark;
-//           }
-//
-//
-//         };
-//
-// }},
+  // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
+  // in the new todo array, all elements will remain unchanged except the one with id: idToMark
+  // this element will have its done value toggled
+  // hint: array.map
+  // return mark;
+  //   markTodo: function(todos, idToMark) {
+  //   let mark = todoFunctions.cloneArrayOfObjects(todos);
+  //     for (var i =0 ; i < mark.length; i++){
+  //
+  //       if (mark[i].id == idToMark){
+  //       if ((!mark[i].done) || (mark[i].done == "false")){
+  //           mark[i].done = "true";
+  //           return mark;
+  //           }
+  //       else{
+  //             console.log("hi");
+  //             mark[i].done = "false"
+  //             return mark;
+  //           }
+  //
+  //
+  //         };
+  //
+  // }},
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
-    }
   }
+};
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
